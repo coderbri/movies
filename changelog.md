@@ -1,33 +1,24 @@
 # Changelog
 
-[//]: # (## v0.2.0 - Project Initialization)
-
-[//]: # (**Release Date**: November 5, 2025)
-
-[//]: # ()
-[//]: # (### Summary)
-
-[//]: # (- Initialized **Spring Boot project** using Maven and Java 17.)
-
-[//]: # (- Configured project metadata and dependencies:)
-
-[//]: # (    - Lombok)
-
-[//]: # (    - Spring Web)
-
-[//]: # (    - Spring Data MongoDB)
-
-[//]: # (    - Spring Boot DevTools)
-
-[//]: # (- Extracted and imported the initialized project into IntelliJ IDEA.)
-
-[//]: # ()
-[//]: # (### Purpose)
-
-[//]: # (This version marks the official **initialization of the MovieAPI backend project**, transitioning from environment and database setup to code development readiness.)
-
-[//]: # ()
+[//]: # (## v0.3.0 - ...)
 [//]: # (---)
+
+## v0.2.0 - Project Initialization
+**Release Date**: November 17, 2025
+
+### Summary
+- Initialized **Spring Boot project** using Maven and Java 17.
+- Configured project metadata and dependencies:
+    - Lombok
+    - Spring Web
+    - Spring Data MongoDB
+    - Spring Boot DevTools
+- Extracted and imported the initialized project into IntelliJ IDEA.
+
+### Purpose
+This version marks the official **initialization of the MovieAPI backend project**, transitioning from environment and database setup to code development readiness.
+
+---
 
 ## v0.1.0 - NoSQL Database Setup
 **Release Date**: November 5, 2025
