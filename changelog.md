@@ -1,7 +1,21 @@
 # Changelog
 
-[//]: # (## v0.3.0 - ...)
-[//]: # (---)
+## v0.3.0 - Project Structure & Test Running the Application
+**Release Date**: November 18, 2025
+
+### Summary
+- Understood full Spring Boot project structure, including breakdown of:
+    - `.mvn` directory
+    - `src/main` and `src/test`
+    - Java package layout and generated `MoviesApplication` class
+    - Resources folder purpose
+- Understood how the Spring Boot application starts and the role of `@SpringBootApplication`.
+- Verified successful startup through Tomcat logs and localhost testing.
+
+### Purpose
+This version establishes a clear understanding of the initial Spring Boot project layout and confirms the application runs locally, preparing for the creation of the first REST endpoint.
+
+---
 
 ## v0.2.0 - Project Initialization
 **Release Date**: November 17, 2025
