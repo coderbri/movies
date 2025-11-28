@@ -1,10 +1,33 @@
 # Changelog
 
-[//]: # (## v0.5.0 - First REST Endpoint Created)
-
-[//]: # (v0.4.0&#40;api&#41;: added first REST endpoint)
+[//]: # (## v0.6.0 - First REST Endpoint Created)
 
 [//]: # (---)
+
+## v0.5.0 - Database Configuration & Environment Variable Setup
+**Release Date**: November 27, 2025
+
+### Summary
+- Configured the application to connect to the MongoDB cluster using `application.properties`.
+- Added MongoDB connection values:
+    - `spring.data.mongodb.database`
+    - `spring.data.mongodb.uri`
+- Created a secure `.env` file in `src/main/resources` to store sensitive information:
+    - `MONGO_DATABASE`
+    - `MONGO_USER`
+    - `MONGO_PASSWORD`
+    - `MONGO_CLUSTER`
+- Added `.env.example` for public repository use, containing variable names without sensitive values.
+- Updated `.gitignore` to ensure `.env` is excluded from version control.
+- Installed `spring-dotenv` Maven dependency to enable Spring Boot to read environment variables.
+- Updated `application.properties` to load variables via `${env.VARIABLE_NAME}` notation.
+- Verified the application can now securely connect to the MongoDB Atlas cluster using environment variables.
+
+### Purpose
+This version establishes secure, maintainable database configuration practices.  
+It ensures sensitive credentials remain private while providing a clean and scalable way to manage environment variables for future deployment.
+
+---
 
 ## v0.4.0 - First REST Endpoint Created
 **Release Date**: November 27, 2025
