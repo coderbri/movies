@@ -1,8 +1,30 @@
 # Changelog
 
-[//]: # (## v0.7.0 - ...)
+[//]: # (## v0.8.0 - ...)
 
 [//]: # (---)
+
+## v0.7.0 - GET One Movie Endpoint (ObjectId & IMDb ID)
+**Release Date**: December 2, 2025
+
+### Summary
+- Added support for retrieving a **single movie** from MongoDB.
+- Implemented initial lookup using MongoDB’s `_id` field:
+    - Added `singleMovie(ObjectId id)` method in `MovieService`.
+    - Created `GET /api/v1/movies/{id}` endpoint using `@PathVariable`.
+    - Returned results wrapped in `Optional<Movie>` to safely handle missing entries.
+- Improved endpoint design by replacing raw `ObjectId` lookup with `imdbId`:
+    - Added `findMovieByImdbId(String imdbId)` to `MovieRepository` using Spring Data’s derived query methods.
+    - Updated service method to use `imdbId` instead of `ObjectId`.
+    - Updated controller to expose `GET /api/v1/movies/{imdbId}`.
+- Successfully tested endpoint via browser and sample IMDb IDs such as:
+    - `http://localhost:8080/api/v1/movies/tt0499549`
+
+### Purpose
+This version extends the API by enabling lookup of individual movies.  
+It replaces the less user-friendly MongoDB `ObjectId` with a clean public-facing `imdbId`, preparing the backend for client applications that need single-movie views.
+
+---
 
 ## v0.6.0 - Models, Repository, Service Layer & GET All Movies API
 **Release Date**: December 1, 2025
