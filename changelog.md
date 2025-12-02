@@ -1,8 +1,33 @@
 # Changelog
 
-[//]: # (## v0.6.0 - First REST Endpoint Created)
+[//]: # (## v0.7.0 - ...)
 
 [//]: # (---)
+
+## v0.6.0 - Models, Repository, Service Layer & GET All Movies API
+**Release Date**: December 1, 2025
+
+### Summary
+- Created **Movie** and **Review** model classes to represent MongoDB documents.
+    - Annotated models using `@Document`, `@Id`, and `@DocumentReference`.
+    - Implemented Lombok annotations (`@Data`, `@AllArgsConstructor`, `@NoArgsConstructor`) for boilerplate reduction.
+    - Defined a manual reference relationship for associating movies with review IDs.
+- Implemented the first REST controller:
+    - Added `MovieController` with `/api/v1/movies` endpoint.
+    - Returned HTTP responses using `ResponseEntity`.
+- Built foundational backend layers:
+    - Created `MovieRepository` interface extending `MongoRepository`.
+    - Implemented `MovieService` as the business logic layer.
+    - Connected Controller → Service → Repository for clean three-tier architecture.
+- Implemented the first functional API endpoint:
+    - **GET /api/v1/movies** returns the full list of movies from MongoDB.
+    - Verified with browser testing and `curl` response headers.
+
+### Purpose
+This version introduces the full MVC structure required for backend development. 
+It establishes clean separation of concerns and successfully retrieves real movie data through the project's first API.
+
+---
 
 ## v0.5.0 - Database Configuration & Environment Variable Setup
 **Release Date**: November 27, 2025
