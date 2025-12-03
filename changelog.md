@@ -1,8 +1,34 @@
 # Changelog
 
-[//]: # (## v0.8.0 - ...)
+[//]: # (## v0.9.0 - ...)
 
 [//]: # (---)
+
+## v0.8.0 - Setting up MVC for Reviews
+**Release Date**: December 3, 2025
+
+### Summary
+- Implemented full MVC structure for handling movie reviews.
+- Added **ReviewRepository** extending `MongoRepository` for database operations.
+- Updated **Review** model:
+    - Annotated with `@Document`, `@Id`, and Lombok annotations.
+    - Added a custom constructor accepting only the review body to support auto-generated IDs.
+- Implemented **ReviewService**:
+    - Inserted new reviews into the `reviews` collection.
+    - Used `MongoTemplate` to perform an update operation on the related `Movie` document.
+    - Dynamically pushed newly created `Review` objects into a movie’s `reviewIds` array.
+- Created **ReviewController** with a POST endpoint:
+    - `POST /api/v1/reviews` accepts JSON payload including `reviewBody` and `imdbId`.
+    - Returns the created review with HTTP 201 (Created).
+- Added Postman testing:
+    - Validated POST creation of a review.
+    - Confirmed GET movie responses now include populated review reference entries.
+
+### Purpose
+This version introduces full backend support for creating and associating reviews with movies.  
+It implements a complete repository–service–controller flow, supports dynamic MongoDB updates through `MongoTemplate`, and finalizes the backend architecture before frontend development begins.
+
+---
 
 ## v0.7.0 - GET One Movie Endpoint (ObjectId & IMDb ID)
 **Release Date**: December 2, 2025
